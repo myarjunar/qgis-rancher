@@ -59,7 +59,7 @@ services:
       - postgis
 
   qgisfeed:
-    image: qgis/qgisfeed:production
+    image: qgis/feed:latest
     environment:
       - QGISFEED_DOCKER_DBNAME
       - QGISFEED_DOCKER_DBUSER
@@ -81,7 +81,7 @@ services:
       internal:
 
   nginx:
-    image: qgis/qgisfeed-nginx:production
+    image: myarjunar/qgisfeed-nginx:production
     ports:
       - "80:8000"
     logging:

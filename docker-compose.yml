@@ -12,8 +12,8 @@ services:
       - "80:80"
       - "443:443"
     environment:
-      EMAIL: $(ADMIN_EMAIL)
-      DOMAIN: $(DOMAIN_NAME)
+      EMAIL: ${ADMIN_EMAIL}
+      DOMAIN: ${DOMAIN_NAME}
     links:
       - rancher-server
     restart: always
